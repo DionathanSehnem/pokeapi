@@ -46,7 +46,7 @@ function pokemonid() {
         .then((data) => {
             console.log(data);
             pokenome.innerHTML = `${data.name} #${data.id}`;
-            pokeimg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$%7Bdata.id%7D.png`;
+            pokeimg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`;
 
             pokehp.innerHTML = ` ${data.stats[0].base_stat}`;
             pokeattack.innerHTML = ` ${data.stats[1].base_stat}`;
